@@ -6,7 +6,7 @@ const app = express()
 const PORT = process.env.PORT || 5000
 const portfolioRoute = require('./routes/portfolioRoute')
 const corsOptions = {
-  origin: 'https://tiny-bublanina-e441f9.netlify.app', // Allow Netlify URL
+  origin: 'https://shimmering-toffee-894daf.netlify.app', // Allow Netlify URL
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   credentials: true,
 };
