@@ -5,11 +5,13 @@ const cors = require('cors')
 const app = express()
 const PORT = process.env.PORT || 5000
 const portfolioRoute = require('./routes/portfolioRoute')
-app.use(cors({
-  origin: 'http://localhost:5173/myportfolio', // Allow specific origin
-  methods: 'GET,POST,PUT,DELETE',           // Allowed methods
-  allowedHeaders: 'Content-Type,Authorization' // Allowed headers
-}));
+const corsOptions = {
+  origin: 'https://tiny-bublanina-e441f9.netlify.app', // Allow Netlify URL
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  credentials: true,
+};
+
+app.use(cors(corsOptions));
 
 app.use(express.json())
 

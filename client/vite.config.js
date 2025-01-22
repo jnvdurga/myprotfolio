@@ -7,7 +7,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'https://myprotfolio-2bq6.onrender.com', // Your backend server
+        target: 'https://myprotfolio-2bq6.onrender.com/', // Your backend server
         changeOrigin: true,
       },
     },
